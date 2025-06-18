@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحليل الاستهلاك - نظام تتبع الاستهلاك</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/charts.css">
+</head>
+<body>
+    <!-- شريط التنقل (نفسه في جميع الصفحات) -->
+    <nav class="navbar">
+        <!-- نفس شريط التنقل من dashboard.html -->
+    </nav>
+    
+    <!-- المحتوى الرئيسي -->
+    <div class="main-content">
+        <div class="container">
+            <h1 class="page-title"><i class="fas fa-chart-bar"></i> تحليل الاستهلاك</h1>
+            
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="daily">يومي</button>
+                <button class="tab-btn" data-tab="weekly">أسبوعي</button>
+                <button class="tab-btn" data-tab="monthly">شهري</button>
+                <button class="tab-btn" data-tab="yearly">سنوي</button>
+            </div>
+            
+            <div class="tab-content active" id="daily-tab">
+                <div class="chart-container">
+                    <canvas id="dailyChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="weekly-tab">
+                <div class="chart-container">
+                    <canvas id="weeklyChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="monthly-tab">
+                <div class="chart-container">
+                    <canvas id="monthlyChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="yearly-tab">
+                <div class="chart-container">
+                    <canvas id="yearlyChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">أكثر الأجهزة استهلاكاً</div>
+                        <div class="card-icon red">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                    </div>
+                    <div class="card-value">التكييف</div>
+                    <div class="card-description">45% من الاستهلاك الشهري</div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">أقل الأجهزة استهلاكاً</div>
+                        <div class="card-icon green">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                    </div>
+                    <div class="card-value">الإضاءة LED</div>
+                    <div class="card-description">5% من الاستهلاك الشهري</div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">فرصة التوفير</div>
+                        <div class="card-icon blue">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                    </div>
+                    <div class="card-value">180 ريال/شهر</div>
+                    <div class="card-description">بتعديل استخدام التكييف</div>
+                </div>
+            </div>
+            
+            <div class="savings-tips">
+                <h2><i class="fas fa-lightbulb"></i> نصائح لتوفير الطاقة</h2>
+                <div class="tips-container">
+                    <div class="tip">
+                        <i class="fas fa-thermometer-half"></i>
+                        <h3>ضبط مكيف الهواء</h3>
+                        <p>ضبط درجة الحرارة على 24-26° مئوية يوفر 10% من استهلاك التكييف</p>
+                    </div>
+                    <div class="tip">
+                        <i class="fas fa-snowflake"></i>
+                        <h3>صيانة الثلاجة</h3>
+                        <p>تنظيف المكثف الخلفي للثلاجة يزيد كفاءتها ويوفر الطاقة</p>
+                    </div>
+                    <div class="tip">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>استخدام إضاءة LED</h3>
+                        <p>مصابيح LED تستهلك طاقة أقل بنسبة 85% من المصابيح التقليدية</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- التذييل (نفسه في جميع الصفحات) -->
+    <footer class="footer">
+        <!-- نفس التذييل من dashboard.html -->
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/usage.js"></script>
+</body>
+</html>
