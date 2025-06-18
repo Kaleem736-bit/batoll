@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدخال البيانات - نظام تتبع الاستهلاك</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- شريط التنقل (نفسه في جميع الصفحات) -->
+    <nav class="navbar">
+        <!-- نفس شريط التنقل من dashboard.html -->
+    </nav>
+    
+    <!-- المحتوى الرئيسي -->
+    <div class="main-content">
+        <div class="container">
+            <h1 class="page-title"><i class="fas fa-plug"></i> إدخال بيانات الأجهزة</h1>
+            
+            <div class="device-form">
+                <form id="deviceForm">
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="deviceName"><i class="fas fa-plug"></i> اسم الجهاز</label>
+                                <select id="deviceName" class="form-control" required>
+                                    <option value="">اختر جهاز...</option>
+                                    <option value="fridge">ثلاجة</option>
+                                    <option value="ac">تكييف</option>
+                                    <option value="washing">غسالة</option>
+                                    <option value="tv">تلفزيون</option>
+                                    <option value="heater">سخان</option>
+                                    <option value="other">جهاز آخر</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="power"><i class="fas fa-bolt"></i> القدرة (وات)</label>
+                                <input type="number" id="power" class="form-control" placeholder="أدخل القدرة بالواط" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="hours"><i class="fas fa-clock"></i> عدد ساعات التشغيل اليومية</label>
+                                <input type="number" id="hours" class="form-control" placeholder="أدخل عدد الساعات" required min="0" max="24">
+                            </div>
+                        </div>
+                        
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="quantity"><i class="fas fa-calculator"></i> الكمية</label>
+                                <input type="number" id="quantity" class="form-control" placeholder="أدخل الكمية" required min="1" value="1">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="notes"><i class="fas fa-sticky-note"></i> ملاحظات إضافية</label>
+                        <textarea id="notes" class="form-control" rows="3" placeholder="ملاحظات إضافية عن الجهاز"></textarea>
+                    </div>
+                    
+                    <div class="form-group text-right">
+                        <button type="reset" class="btn btn-secondary"><i class="fas fa-times"></i> إلغاء</button>
+                        <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> حفظ الجهاز</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="saved-devices">
+                <h2><i class="fas fa-list"></i> الأجهزة المحفوظة</h2>
+                <div class="table-responsive">
+                    <table class="devices-table">
+                        <thead>
+                            <tr>
+                                <th>اسم الجهاز</th>
+                                <th>القدرة (وات)</th>
+                                <th>ساعات التشغيل</th>
+                                <th>الكمية</th>
+                                <th>الاستهلاك اليومي</th>
+                                <th>الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>تكييف</td>
+                                <td>1500</td>
+                                <td>8</td>
+                                <td>2</td>
+                                <td>24 ك.و/س</td>
+                                <td>
+                                    <button class="btn btn-sm btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-sm btn-delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ثلاجة</td>
+                                <td>200</td>
+                                <td>24</td>
+                                <td>1</td>
+                                <td>4.8 ك.و/س</td>
+                                <td>
+                                    <button class="btn btn-sm btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn btn-sm btn-delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- التذييل (نفسه في جميع الصفحات) -->
+    <footer class="footer">
+        <!-- نفس التذييل من dashboard.html -->
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/input.js"></script>
+</body>
+</html>
