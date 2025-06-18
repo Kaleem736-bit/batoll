@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - نظام تتبع الاستهلاك</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/charts.css">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-bolt"></i>
+                <span>تتبع الاستهلاك</span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="dashboard.html" class="nav-link active"><i class="fas fa-tachometer-alt"></i> لوحة التحكم</a></li>
+                <li><a href="input.html" class="nav-link"><i class="fas fa-plug"></i> إدخال البيانات</a></li>
+                <li><a href="usage.html" class="nav-link"><i class="fas fa-chart-bar"></i> عرض الاستهلاك</a></li>
+                <li><a href="admin.html" class="nav-link"><i class="fas fa-user-cog"></i> لوحة المشرف</a></li>
+            </ul>
+            
+            <div class="user-profile">
+                <img src="assets/user-avatar.png" alt="صورة المستخدم">
+                <span>أحمد محمد</span>
+                <div class="dropdown">
+                    <a href="#"><i class="fas fa-user"></i> الملف الشخصي</a>
+                    <a href="#"><i class="fas fa-cog"></i> الإعدادات</a>
+                    <a href="login.html" id="logout"><i class="fas fa-sign-out-alt"></i> تسجيل الخروج</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- المحتوى الرئيسي -->
+    <div class="main-content">
+        <div class="container">
+            <h1 class="page-title"><i class="fas fa-tachometer-alt"></i> لوحة التحكم</h1>
+            
+            <div class="alert alert-danger">
+                <i class="fas fa-exclamation-triangle"></i>
+                <strong>تنبيه!</strong> أنت تستهلك أكثر من المتوسط هذا الشهر
+            </div>
+            
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">استهلاك اليوم</div>
+                        <div class="card-icon blue">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                    </div>
+                    <div class="card-value">45 ك.و/س</div>
+                    <div class="card-description">زيادة 10% عن الأمس</div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">استهلاك الشهر</div>
+                        <div class="card-icon orange">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                    </div>
+                    <div class="card-value">1,240 ك.و/س</div>
+                    <div class="card-description">زيادة 15% عن الشهر الماضي</div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">متوسط الاستهلاك</div>
+                        <div class="card-icon green">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="card-value">1,100 ك.و/س</div>
+                    <div class="card-description">لشهر يونيو</div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">التكلفة التقديرية</div>
+                        <div class="card-icon red">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                    </div>
+                    <div class="card-value">248 ريال</div>
+                    <div class="card-description">حتى الآن هذا الشهر</div>
+                </div>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-header">
+                    <div class="progress-title">مستوى استهلاكك هذا الشهر</div>
+                    <div>1,240 / 2,000 ك.و/س</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 62%;"></div>
+                </div>
+                <div class="progress-labels">
+                    <div>0</div>
+                    <div>500</div>
+                    <div>1,000</div>
+                    <div>1,500</div>
+                    <div>2,000+</div>
+                </div>
+                <div class="progress-status warning">
+                    مستوى عالي - تجاوزت متوسط الاستهلاك
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <canvas id="consumptionChart"></canvas>
+            </div>
+            
+            <div class="text-center">
+                <button class="btn btn-primary"><i class="fas fa-file-pdf"></i> تصدير تقرير PDF</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- التذييل -->
+    <footer class="footer">
+        <div class="container">
+            <p>نظام تتبع استهلاك الكهرباء &copy; 2023 - جميع الحقوق محفوظة</p>
+            <p>تم التطوير باستخدام HTML5, CSS3, JavaScript و Chart.js</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
