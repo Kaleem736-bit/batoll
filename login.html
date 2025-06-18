@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول - نظام تتبع الاستهلاك</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-form">
+            <div class="login-header">
+                <img src="assets/logo.png" alt="شعار النظام" class="logo">
+                <h2>تسجيل الدخول</h2>
+                <p>أدخل بياناتك للوصول إلى لوحة التحكم</p>
+            </div>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username"><i class="fas fa-user"></i> اسم المستخدم</label>
+                    <input type="text" id="username" class="form-control" placeholder="أدخل اسم المستخدم" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password"><i class="fas fa-lock"></i> كلمة المرور</label>
+                    <input type="password" id="password" class="form-control" placeholder="أدخل كلمة المرور" required>
+                </div>
+                
+                <div class="form-group form-check">
+                    <input type="checkbox" id="remember" class="form-check-input">
+                    <label for="remember" class="form-check-label">تذكرني</label>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-sign-in-alt"></i> دخول
+                    </button>
+                </div>
+            </form>
+            
+            <div class="login-footer">
+                <p><a href="#"><i class="fas fa-key"></i> نسيت كلمة المرور؟</a></p>
+                <p>ليس لديك حساب؟ <a href="#"><i class="fas fa-user-plus"></i> تواصل مع المشرف</a></p>
+            </div>
+        </div>
+        
+        <div class="login-info">
+            <h2><i class="fas fa-bolt"></i> نظام تتبع استهلاك الكهرباء</h2>
+            <div class="features">
+                <p><i class="fas fa-chart-line"></i> تتبع استهلاك الكهرباء بالتفصيل</p>
+                <p><i class="fas fa-bell"></i> تنبيهات عند تجاوز الحدود</p>
+                <p><i class="fas fa-mobile-alt"></i> واجهة متجاوبة تعمل على جميع الأجهزة</p>
+                <p><i class="fas fa-file-pdf"></i> تقارير شهرية قابلة للتحميل</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
